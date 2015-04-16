@@ -1,5 +1,6 @@
 package com.example.helloworld;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -36,7 +37,11 @@ public class HelloWorldActivity extends Activity {
 				EditText editName = (EditText) findViewById(R.id.editTextName);
 				TextView textDisplay = (TextView) findViewById(R.id.textViewDisplay);
 				String nameToDisplay = editName.getText().toString();
-				textDisplay.setText("Hello " + nameToDisplay);
+				// textDisplay.setText("Hello " + nameToDisplay + "! How are you today??? Hiromi was here.");
+
+                    Intent displayIntent = new Intent(getApplicationContext(), DisplayActivity.class);
+                    displayIntent.putExtra("name", nameToDisplay);
+                    startActivity(displayIntent);
 				
 			}
     		
