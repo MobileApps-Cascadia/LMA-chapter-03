@@ -42,6 +42,25 @@ public class HelloWorldActivity extends Activity {
     		
     	});
     }
+    public class MainActivity extends
+            ActionBarActivity {
+        @Overrideprotected void onCreate(Bundle
+                                                 savedInstanceState) {
+            super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); final Button makeItSo =
+                    (Button)findViewById(R.id.button); }//other code for menu options
+                     }
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        makeItSo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { // Add the code to execute when button is
+                clicked
+            } });
+    }
+
+    Intent Activity2Intent =
+            new Intent(getApplicationContext(),
+                    Activity2.class); startActivity(Activity2Intent);
     
 }
 
