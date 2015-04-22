@@ -36,7 +36,7 @@ public class HelloWorldActivity extends Activity {
 				EditText editName = (EditText) findViewById(R.id.editTextName);
 				TextView textDisplay = (TextView) findViewById(R.id.textViewDisplay);
 				String nameToDisplay = editName.getText().toString();
-				textDisplay.setText("Get lost " + nameToDisplay);
+				textDisplay.setText("Hello " + nameToDisplay);
 				
 			}
     		
