@@ -1,9 +1,11 @@
 package com.example.helloworld;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class DisplayActivity extends Activity {
@@ -12,6 +14,11 @@ public class DisplayActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
+
+        TextView textView = (TextView) findViewById(R.id.textView);
+        Intent intent = getIntent();
+        String value = intent.getStringExtra("name");
+        textView.setText("Hello!\n"+value);
     }
 
 
