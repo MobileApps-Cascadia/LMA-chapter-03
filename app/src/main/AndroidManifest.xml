@@ -34,6 +34,10 @@
             android:name=".DisplayActivity"
             android:label="@string/title_activity_display" >
         </activity>
+        <activity
+            android:name=".Read"
+            android:label="@string/title_activity_read" >
+        </activity>
     </application>
 
 </manifest>

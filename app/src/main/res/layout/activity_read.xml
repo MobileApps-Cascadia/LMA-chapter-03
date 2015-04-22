@@ -4,7 +4,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.helloworld.DisplayActivity">
+    tools:context="com.example.helloworld.Read">
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -12,14 +13,17 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textSize="36dp"
-        android:id="@+id/centeredTextView" />
-    <Button
-        android:id="@+id/buttonDisplay"
-        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/centeredTextView2" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Make it so"
-        android:layout_below="@+id/centeredTextView"
+        android:textSize="48dp"
+        android:id="@+id/centeredTextView"
+        android:layout_below="@+id/centeredTextView2"
         android:layout_centerHorizontal="true" />
+
+
+
 
 </RelativeLayout>

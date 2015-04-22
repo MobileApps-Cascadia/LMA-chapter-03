@@ -5,41 +5,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class DisplayActivity extends Activity {
+public class Read extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display);
-
-        initDisplay();
+        setContentView(R.layout.activity_read);
 
 
-        /*Intent readIntent = new Intent(getApplicationContext(), Read.class);
-        startActivity(readIntent);
-*/
+        TextView nameTextView = (TextView)findViewById(R.id.centeredTextView);
+        nameTextView.setText(getIntent().getStringExtra("name"));
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_display, menu);
+        getMenuInflater().inflate(R.menu.menu_read, menu);
         return true;
-    }
-
-    private void initDisplay() {
-
-
-        TextView nameTextView = (TextView)findViewById(R.id.centeredTextView);
-        nameTextView.setText(getIntent().getStringExtra("name"));
-
     }
 
     @Override
