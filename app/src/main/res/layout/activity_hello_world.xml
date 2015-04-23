@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".HelloWorldActivity" >
+    tools:context=".HelloWorldActivity">
 
     <TextView
         android:id="@+id/textViewDisplay"
@@ -19,11 +19,9 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
         android:layout_marginLeft="19dp"
         android:layout_marginTop="56dp"
-        android:text="Name:"
+        android:text="First"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
@@ -45,9 +43,38 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="99dp"
+        android:text="Display"
         android:layout_below="@+id/editTextName"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:text="Display" />
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextlast"
+        android:layout_below="@+id/editTextName"
+        android:layout_marginTop="34dp"
+        android:layout_alignRight="@+id/editTextName"
+        android:layout_alignLeft="@+id/editTextName"
+        android:layout_alignStart="@+id/editTextName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last"
+        android:id="@+id/textView2"
+        android:layout_alignBottom="@+id/editTextlast"
+        android:layout_toLeftOf="@+id/editTextName"
+        android:layout_toStartOf="@+id/editTextName" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear Text"
+        android:id="@+id/clear"
+        android:layout_marginTop="88dp"
+        android:layout_below="@+id/buttonDisplay"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

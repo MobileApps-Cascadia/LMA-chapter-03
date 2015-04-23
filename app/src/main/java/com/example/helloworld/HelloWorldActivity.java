@@ -17,6 +17,7 @@ public class HelloWorldActivity extends Activity {
         setContentView(R.layout.activity_hello_world);
         
         initDisplayButton();
+        initClearButton();
     }
 
 
@@ -34,13 +35,32 @@ public class HelloWorldActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				EditText editName = (EditText) findViewById(R.id.editTextName);
+                EditText lastName = (EditText) findViewById(R.id.editTextlast);
 				TextView textDisplay = (TextView) findViewById(R.id.textViewDisplay);
 				String nameToDisplay = editName.getText().toString();
-				textDisplay.setText("Hello " + nameToDisplay);
-				
+                String lastToDisplay = lastName.getText().toString();
+				textDisplay.setText("Hello " + nameToDisplay + " " + lastToDisplay);
 			}
     		
     	});
+    }
+
+    private void initClearButton() {
+        Button clearButton = (Button) findViewById(R.id.clear);
+        clearButton.setOnClickListener(new OnClickListener () {
+
+            @Override
+            public void onClick(View arg0) {
+            EditText editName = (EditText) findViewById(R.id.editTextName);
+            EditText lastName = (EditText) findViewById(R.id.editTextlast);
+            TextView textDisplay = (TextView) findViewById(R.id.textViewDisplay);
+            editName.setText("");
+            lastName.setText("");
+            textDisplay.setText("Hello World!");
+
+        }
+
+});
     }
     
 }
