@@ -1,7 +1,7 @@
 # chapter-03 exercise
 Learning Mobile Apps Textbook
 
-1. Clone this repo
+1. Fork and Clone this repo
 2. Follow along with the examples from Chapter 3 in the Learning Mobile App Development textbook.
 3. Complete the in-class exercise to add a background color choice to the settings activity
  - Add an Activity
