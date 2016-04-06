@@ -9,3 +9,5 @@ Learning Mobile Apps Textbook
  - Pass name data to new Activity
  - Center Text in Screen
 4. Show me the working code in class
+5. Push your repo to Github
+6. Submit a Pull request
