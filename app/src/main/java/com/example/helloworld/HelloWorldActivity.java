@@ -1,5 +1,6 @@
 package com.example.helloworld;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -34,9 +35,11 @@ public class HelloWorldActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				EditText editName = (EditText) findViewById(R.id.editTextName);
-				TextView textDisplay = (TextView) findViewById(R.id.textViewDisplay);
 				String nameToDisplay = editName.getText().toString();
-				textDisplay.setText("Hello " + nameToDisplay);
+
+                Intent activity2Intent = new Intent(getApplicationContext(), SecondActivity.class);
+                activity2Intent.putExtra("UserName", nameToDisplay);
+                startActivity(activity2Intent);
 				
 			}
     		
