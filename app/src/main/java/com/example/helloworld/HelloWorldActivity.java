@@ -1,5 +1,6 @@
 package com.example.helloworld;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -15,7 +16,7 @@ public class HelloWorldActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hello_world);
-        
+
         initDisplayButton();
     }
 
@@ -26,7 +27,7 @@ public class HelloWorldActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-    
+
     private void initDisplayButton() {
     	Button displayButton = (Button) findViewById(R.id.buttonDisplay);
     	displayButton.setOnClickListener(new OnClickListener () {
@@ -36,11 +37,16 @@ public class HelloWorldActivity extends Activity {
 				EditText editName = (EditText) findViewById(R.id.editTextName);
 				TextView textDisplay = (TextView) findViewById(R.id.textViewDisplay);
 				String nameToDisplay = editName.getText().toString();
-				textDisplay.setText("Hello " + nameToDisplay);
-				
+
+                Intent myIntent = new Intent(getApplicationContext(),SecondActivity.class);
+                myIntent.putExtra("UserName", nameToDisplay);
+                startActivity(myIntent);
+
+				//textDisplay.setText("Greetings " + nameToDisplay);
+
 			}
-    		
+
     	});
     }
-    
+
 }
