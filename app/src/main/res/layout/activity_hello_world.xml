@@ -16,13 +16,13 @@
         android:textSize="@dimen/message_text_size" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:layout_marginLeft="19dp"
-        android:layout_marginTop="56dp"
+        android:layout_alignLeft="@+id/textViewDisplay"
+        android:layout_below="@+id/textViewDisplay"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="55dp"
         android:text="Name:"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -30,10 +30,10 @@
         android:id="@+id/editTextName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_marginLeft="36dp"
-        android:layout_toRightOf="@+id/textView1"
+        android:layout_alignBaseline="@+id/textViewName"
+        android:layout_alignBottom="@+id/textViewName"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewName"
         android:ems="10"
         android:inputType="textPersonName" >
 
